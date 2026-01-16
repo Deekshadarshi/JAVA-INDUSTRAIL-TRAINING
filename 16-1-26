@@ -1,0 +1,69 @@
+Oops Basic Code
+Code 1
+Class and Object Creation 
+class Student{
+    int rollNumber;
+    String name;
+}
+public class Main {
+    public static void main(String[] args) {
+        Student obj=new Student();
+        obj.rollNumber=1;
+        obj.name="Deeksha";
+        System.out.println(obj.rollNumber);
+        System.out.println(obj.name);
+        
+    }
+}
+Code 2
+Constructor(parameterless)
+class Student{
+    int rollNumber;
+    String name;
+Student(){
+    rollNumber=1;
+    name="Deeksha";
+  }//patermeterless
+}
+public class Main {
+    public static void main(String[] args) {
+        Student obj=new Student();
+        System.out.println(obj.rollNumber);
+        System.out.println(obj.name);
+        
+    }
+}
+Code 3
+Constructor(parameterized)
+class Student{
+    int rollNumber;
+    String name;
+Student(int i,String n){
+    rollNumber=i;
+    name=n;
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+        Student obj=new Student(1,"Deeksha");
+        System.out.println(obj.rollNumber);
+        System.out.println(obj.name);
+        
+    }
+}
+Code 4
+Attributes(instance and local variables)
+class Student{
+    int rollNumber;//instance variable
+    void setId(int rollNumber){
+        this.rollNumber=rollNumber;//local variable
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Student obj=new Student();
+        obj.setId(1);
+        System.out.println(obj.rollNumber);
+        
+    }
+}
