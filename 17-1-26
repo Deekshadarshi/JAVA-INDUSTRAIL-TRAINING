@@ -1,0 +1,164 @@
+10 mcqs on the topic CONSTRUCTORS IN JAVA (Parameterless & Parameterized)
+
+1)What is the main purpose of a constructor in Java?
+
+A. To destroy an object
+B. To initialize an object
+C. To declare a method
+D. To allocate memory manually
+
+✅ Correct Answer: B
+2)Which of the following is a parameterless (default) constructor?
+
+A. Student(int id) {}
+B. Student() {}
+C. void Student() {}
+D. Student(void) {}
+
+✅ Correct Answer: B
+3)What happens if no constructor is explicitly defined in a Java class?
+
+A. Compilation error occurs
+B. JVM creates a parameterized constructor
+C. Java provides a default parameterless constructor
+D. Object cannot be created
+
+✅ Correct Answer: C
+4)class Test {
+    int x;
+    Test(int a) {
+        x = a;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Test t = new Test();
+    }
+}
+What will be the output?
+
+A. Program runs successfully
+B. x will be initialized to 0
+C. Compilation error
+D. Runtime error
+
+✅ Correct Answer: C
+5)Which of the following statements about constructors in Java is TRUE?
+
+A. Constructors can be inherited
+B. Constructors can be overridden
+C. Constructors can be overloaded
+D. Constructors must have a return type
+
+✅ Correct Answer: C
+📝 Reason: Constructors can be overloaded but cannot be inherited or overridden and have no return type.
+6)Why does the following code fail to compile?
+❌ WRONG CODE
+class Test {
+    void Test() {
+        System.out.println("Constructor called");
+    }
+}
+✔️ CORRECT CODE
+class Test {
+    Test() {
+        System.out.println("Constructor called");
+    }
+}
+
+Concept: Constructor must not have a return type.
+
+7 )— Parameterized Constructor Written as Method
+❓ Question
+Is Test(int x) a constructor? Justify.
+❌ WRONG CODE
+class Test {
+    int Test(int x) {
+        return x;
+    }
+}
+✔️ CORRECT CODE
+class Test {
+    Test(int x) {
+        System.out.println(x);
+    }
+}
+Concept: Constructors cannot return values.
+
+8) — Missing Default Constructor
+❓ Question
+What happens when this program is executed?
+❌ WRONG CODE
+class Test {
+    Test(int x) {
+        System.out.println(x);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Test t = new Test();   // error
+    }
+}
+
+✔️ CORRECT CODE
+class Test {
+    Test() {
+        System.out.println("Default");
+    }
+
+    Test(int x) {
+        System.out.println(x);
+    }
+}
+
+Concept: If a parameterized constructor exists, Java does not provide a default one.
+ 9) — Constructor Name Must Match Class Name
+❓ Question
+Identify the error in the constructor declaration.
+❌ WRONG CODE
+class Test {
+    Automata() {
+        System.out.println("Hello");
+    }
+}
+
+✔️ CORRECT CODE
+class Test {
+    Test() {
+        System.out.println("Hello");
+    }
+}
+Concept: Constructor name must be exactly same as class name.
+10) — Constructor Overloading
+❓ Question
+Why does constructor overloading fail here?
+❌ WRONG CODE
+class Test {
+    void Test() {
+        System.out.println("Default");
+    }
+
+    Test(int x) {
+        System.out.println(x);
+    }
+}
+
+✔️ CORRECT CODE
+class Test {
+    Test() {
+        System.out.println("Default");
+    }
+
+    Test(int x) {
+        System.out.println(x);
+    }
+}
+Concept: All overloaded constructors must be real constructors, not methods.
+
+
+
+
+
+
